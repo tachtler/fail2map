@@ -39,7 +39,12 @@ function finishInit(){
 }
 
 window.onload = function() {
-    map = L.map('map').setView([23.26, 0], 3);
+    // Tachtler
+    // default: map = L.map('map').setView([23.26, 0], 3);
+    map = L.map('map', {
+        center: [23.26, 0],
+        zoom: 3
+    });
     
     // list of tile providers can be seen here: http://leaflet-extras.github.io/leaflet-providers/preview/
     baseLayer = L.tileLayer.provider('Thunderforest.Landscape', {
